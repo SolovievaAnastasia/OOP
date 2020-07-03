@@ -1,3 +1,4 @@
+// Класс People использует объект Ship
 using namespace std;
 #include <iostream>
 #include <string>
