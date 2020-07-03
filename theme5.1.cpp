@@ -11,7 +11,6 @@ class People {
   People(string n) { name = n; }
   void swim(Ship& a);
   void setPrice(Ship& a, int price);
-
  private:
   string name;
 };
@@ -19,7 +18,6 @@ class People {
 class Ship {
   friend void People::swim(Ship&);
   friend void People::setPrice(Ship&, int price);
-
  public:
   Ship(string shName, int shPrice) {
     name = shName;
@@ -27,7 +25,6 @@ class Ship {
   }
   string getName() { return name; }
   int getPrice() { return price; }
-
  private:
   string name;
   int price;
@@ -44,6 +41,5 @@ int main() {
   first.swim(lainer);
   first.setPrice(lainer, 8000);
   cout << lainer.getName() << " cost " << lainer.getPrice() << endl;
-
   return 0;
 }
