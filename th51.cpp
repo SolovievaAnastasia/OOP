@@ -1,5 +1,6 @@
 // Класс People использует объект Ship
 using namespace std;
+using namespace std;
 #include <iostream>
 #include <string>
 
@@ -40,9 +41,9 @@ void People::setPrice(Ship& a, int price) {
 int main() {
   Ship lainer("Pearl", 45000);
   People first("Petya");
-  first.drive(lainer);
+  first.swim(lainer);
   first.setPrice(lainer, 8000);
-  cout << lainer.getName() << " : " << lainer.getPrice() << endl;
+  cout << lainer.getName() << " cost " << lainer.getPrice() << endl;
 
   return 0;
 }
