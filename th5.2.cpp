@@ -1,7 +1,7 @@
 // Дружественные классы 
 #include <iostream>
-using namespace std;
 #include <string>
+using namespace std;
 
 class Ship;
 
@@ -31,7 +31,7 @@ class Ship {
   int price;
 };
 
-void People::swim(Ship &a) { cout << name << " sailes " << a.name << endl; }
+void People::swim(Ship &a) { cout << name << " sailes on " << a.name << endl; }
 void People::setPrice(Ship &a, int price) {
   if (price > 0) a.price = price;
 }
@@ -39,7 +39,7 @@ void People::setPrice(Ship &a, int price) {
 int main() {
   Ship lainer("Pearl", 45000);
   People first("Petya");
-  first.drive(lainer);
+  first.swim(lainer);
   first.setPrice(lainer, 8000);
   cout << lainer.getName() << " : " << lainer.getPrice() << endl;
 
