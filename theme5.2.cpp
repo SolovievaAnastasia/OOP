@@ -10,14 +10,12 @@ class People {
   People(string n) { name = n; }
   void swim(Ship &a);
   void setPrice(Ship &a, int price);
-
  private:
   string name;
 };
 
 class Ship {
   friend class People;
-
  public:
   Ship(string shipName, int shipPrice) {
     name = shipName;
@@ -25,7 +23,6 @@ class Ship {
   }
   string getName() { return name; }
   int getPrice() { return price; }
-
  private:
   string name;
   int price;
