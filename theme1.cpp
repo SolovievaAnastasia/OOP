@@ -22,6 +22,6 @@ class WoodTh {
     WoodTh A(20, 30);
     WoodTh B(10, 40);
     A.display();
-
+    B.display();
     return 0;
   }
