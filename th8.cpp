@@ -20,8 +20,8 @@ int main() {
   Ship A;
   Chair B;
 
-  A.Draw();
-  B.Draw();
+  A.Make();
+  B.Make();
 
   return 0;
 }
