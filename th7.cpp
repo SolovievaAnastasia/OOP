@@ -1,7 +1,3 @@
-#include <iostream>
-#include <string>
-using namespace std;
-
 class Ship {
  private:
   string name;
@@ -13,7 +9,6 @@ class Ship {
   string getName() { return p_name; }
   int getID() { return p_id; }
 };
-
 class Machine {
  private:
   string p_engine;
