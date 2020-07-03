@@ -6,7 +6,6 @@ class WoodTh {
 
  public:
   WoodTh(int number) { setNumber(number); }
-
   void setNumber(int number) { sh_number = number; }
   int getNumber() { return sh_number; }
 };
