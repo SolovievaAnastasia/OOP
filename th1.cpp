@@ -2,19 +2,26 @@
 using namespace std;
 
 class WoodTh {
- protected
+ protected:
   int width, height;
 
- public
+ public:
   WoodTh(int a = 0, int b = 0) {
     width = a;
     height = b;
   }
+    ;
+    
+    void display() 
+    {
+        cout << width << " width" << endl;
+        cout << height <<" height" <<endl;
+    }
+};
   int main() {
     WoodTh A(20, 30);
     WoodTh B(10, 40);
-    cout << A << endl;
-    cout << B << endl;
+    A.display();
 
     return 0;
   }
