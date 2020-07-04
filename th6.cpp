@@ -1,42 +1,20 @@
-//Перегрузка оператора сравнения в height и оператора присвоения в width
 #include <iostream>
 using namespace std;
 
-class WoodTh {
- protected
-  int width, height;
-
- public
-  WoodTh(int a = 0, int b = 0) {
-    width = a;
-    height = b;
+class Ship {
+ public:
+  Ship(int pr) { price = pr; }
+  void display() { cout << price << " rubles" << endl; }
+  Ship& operator+=(Ship B) {
+    price += B.price;
+    return *this;
   }
-bool operator==(WoodTh A, WoodTh B) {
-    return A.height == B.height; }
-bool operator!=(WoodTh A, WoodTh B) {
-    return A.height != B.height; }
-bool operator>(WoodTh A, WoodTh B) {
-    return A.height > B.height; }
-bool operator<(WoodTh A, WoodTh B) {
-    return A.height < B.height; }
-    
-  cout << width << " width" << endl;
-} WoodTh& operator+=(WoodTh B) {
-  width += B.width;
-  return *this;
-}
-int width;
-}
-;
-
+  int price;
+};
 int main() {
-  WoodTh A(20, 30);
-  WoodTh B(10, 40);
+  Ship A(200000);
+  Ship B(300000);
   A += B;
-  bool sravn1 = A == B;
-  bool sravn2 = A > B;
-  cout << A << endl;
-  cout << B << endl;
-
+  A.display();
   return 0;
 }
