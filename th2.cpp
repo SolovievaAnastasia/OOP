@@ -1,23 +1,23 @@
 #include <iostream>
 using namespace std;
-
-class WoodTh {
- public:
-  int counter;  // общее кол животных
- protected:
-  int ship;
-  int chair;
-  int pencil;
-
-  // функция вычисление общего количества животных
-  count_WoodTh() { counter = ship + chair + pencil; }
-  set_ship(int count_of_ship) { ship = count_of_ship; }
+ 
+class Ship
+{
+    public:
+        Ship()
+        {
+            ksh = new int[7] { 4, 9, 1, 8, 7, 3 };
+        }
+        ~Ship()
+        {
+            delete []ksh;
+        }
+        int *ksh;
 };
-
-class ship : public WoodTh {
- public:
-  int count_ship() {
-    return ship;
-    ship
-  }
-};
+ 
+int main()
+{
+    Ship *kShip = new Ship;
+    cout << kShip->ksh[0] << endl;
+    return 0;
+}
